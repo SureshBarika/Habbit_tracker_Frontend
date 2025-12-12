@@ -23,6 +23,8 @@ API.interceptors.response.use(
 	}
 )
 
+export const registerUser = (payload) => API.post('/users/register', payload)
+export const loginUser = (payload) => API.post('/users/login', payload)
 export const fetchHabits = (userId) => API.get(`/habits/${userId}`)
 export const createHabit = (payload) => API.post('/habits', payload)
 export const deleteHabit = (id) => API.delete(`/habits/${id}`)

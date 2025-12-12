@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import dayjs from 'dayjs'
-import { addCheckin, getStreak } from '../api'
+import { addCheckin, getStreak } from '../../api'
 
 export default function HabitCard({ habit, onDeleted, onUpdated, updateDone }) {
   const [done, setDone] = useState(habit.done || false)
@@ -57,7 +57,7 @@ export default function HabitCard({ habit, onDeleted, onUpdated, updateDone }) {
   const created = dayjs(habit.startDate).format("MMM D")
 
   return (
-    <div className="card flex items-center justify-between gap-4 p-4 rounded-xl shadow bg-white">
+    <div className=" hbt-card card flex items-center justify-between gap-4 p-4 rounded-xl shadow bg-white">
       <div>
         <h3 className="text-lg font-semibold text-slate-800">{habit.name}</h3>
         <p className="text-sm text-slate-500">
